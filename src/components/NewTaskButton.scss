@@ -1,0 +1,37 @@
+$primary-color-text-first: #f9f9f9;
+$primary-color-text-second: #49a29b;
+
+.newtask-button-container{
+  height: 50px;
+  width: 170px;
+  color: $primary-color-text-first;
+  background-color: $primary-color-text-second;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  border-radius: 10px;
+
+  .newtask-button{
+    display: inline-block;
+    transition: 0.2s;
+  }
+  p{
+    display: inline-block;
+    padding-right: 10px;
+    padding-bottom: 4px;
+  }
+
+
+}
+//TODO HOVER работает не совсем правильно, иконка смещается при вращении
+.newtask-button-container:hover{
+  transition: 0.2s;
+  background-color: #65bab3;
+
+  .newtask-button{
+    transition: 0.2s;
+    transform:rotate(90deg);
+  }
+
+}

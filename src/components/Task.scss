@@ -1,0 +1,60 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+.task-container{
+  border: 2px solid $primary-color-border;
+  border-radius: 10px;
+  margin: 7px 15px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //TODO Вылезает за границы блока текст, нужна кнопка "Раскрыть" или типа того
+  p{
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+    display: inline-block;
+  }
+  .task-buttons-container{
+    display: flex;
+
+    .task-done-button{
+      text-align: center;
+      margin: 0 4px;
+      padding: 4px 5px;
+      border-radius: 15px;
+    }
+    .task-done-button:hover{
+      transition: 0.3s;
+      background-color: $primary-color-border;
+    }
+
+    .task-change-button{
+      text-align: center;
+      margin: 0 4px;
+      padding: 4px 5px;
+      border-radius: 15px;
+    }
+    .task-change-button:hover{
+      transition: 0.3s;
+      background-color: $primary-color-border;
+    }
+    .task-cancel-button{
+      text-align: center;
+      margin: 0 4px;
+      padding: 4px 5px;
+      border-radius: 15px;
+    }
+    .task-cancel-button:hover{
+      transition: 0.3s;
+      background-color: $primary-color-border;
+    }
+  }
+
+
+}

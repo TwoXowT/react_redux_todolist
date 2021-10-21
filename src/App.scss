@@ -1,0 +1,13 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+.App{
+  background-color: $primary-color-bg;
+  color: $primary-color-text-first;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
