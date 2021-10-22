@@ -24,14 +24,10 @@ $primary-color-text-second: #49a29b;
 
 
 }
-//TODO HOVER работает не совсем правильно, иконка смещается при вращении
+
 .newtask-button-container:hover{
   transition: 0.2s;
   background-color: #65bab3;
 
-  .newtask-button{
-    transition: 0.2s;
-    transform:rotate(90deg);
-  }
 
 }
