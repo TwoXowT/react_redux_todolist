@@ -1,0 +1,62 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+}
+
+.modal {
+  position: absolute;
+  min-width: 1000px;
+  min-height: 400px;
+  z-index: 1;
+  background-color: $primary-color-block;
+  border-radius: 10px;
+
+}
+
+.modal button {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #0000003a;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.562);
+}
+h1{
+  color: $primary-color-text-second;
+}
+
+.input-task{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 24px;
+  color: $primary-color-text-first;
+  background-color: $primary-color-block;
+  border: 2px solid $primary-color-border;
+  border-radius: 10px;
+  height: 35px;
+}
