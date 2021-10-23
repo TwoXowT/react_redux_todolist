@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './AddTask.scss';
+import {useDispatch} from "react-redux";
+import {addTask} from "../store/actionCreators/actionCreators";
 
 const AddTask = ({ createTask }) => {
     const [text, setText] = useState('Поучить React')
-
+    const dispatch = useDispatch();
     function handleChange(e) {
         setText(e.target.value)
     }
@@ -13,7 +15,7 @@ const AddTask = ({ createTask }) => {
             <h1>Добавить задачу</h1>
             <div className="addTask-content">
                 <input className="addTask-input" value={text} onChange={handleChange}/>
-                <button className="addTask-button" onClick={()=>createTask(text)}>Добавить</button>
+                <button className="addTask-button" onClick={()=>dispatch(addTask(text))}>Добавить</button>
             </div>
 
         </div>
