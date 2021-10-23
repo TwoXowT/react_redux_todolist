@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import './App.scss';
 import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";
-import NewTaskModalWindow from "./components/NewTaskModalWindow";
-import NewTaskButton from "./components/NewTaskButton";
 
 function App() {
 
@@ -18,18 +16,17 @@ function App() {
     const [currentTaskId, setCurrentTaskId] = useState(6)
 
     function makeDoneTask(doneTask){
-        if(doneTask.completeStatus === false){
+        if (!doneTask.completeStatus){
             const taskLst = [...taskList]
 
-            taskLst.filter((task)=>{
-                if(task === doneTask){
+            taskLst.forEach((task)=> { // можно еще зарефакторить
+                if (task === doneTask){
                     task.completeStatus = !task.completeStatus
                 }
             })
+
             setTaskList(taskLst)
         }
-
-
     }
 
     function removeTaskHandler(removeTask){
@@ -38,16 +35,18 @@ function App() {
     }
 
     function createTask(text){
-        let copy = Object.assign([], taskList);
-        const task = {id: currentTaskId, text: text, completeStatus: false}
-        copy.push(task)
+        let copy =  [...taskList];
+        const task = { id: currentTaskId, text: text, completeStatus: false }
+        copy.unshift(task)
         setTaskList(copy)
     }
+
   return (
     <div className="App">
+
         <AddTask createTask={createTask}/>
         <TaskList taskList={taskList}
-                  makeDoneTak={makeDoneTask}
+                  makeDoneTask={makeDoneTask}
                   removeTask={removeTaskHandler}/>
     </div>
   );
