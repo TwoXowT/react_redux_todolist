@@ -7,25 +7,33 @@ const todos = (state = initialState, action)=>{
     }
 
     switch (action.type){
-        case ADD_TASK:
-            return [
-                ...state, {
-                    id: action.id,
-                    text: action.text,
-                    completeStatus: false,
-                },
-            ];
-        case DONE_TASK:
-            return state.map((task) =>
-                task.id === action.id
-                    ? {...task, completedStatus: !task.completedStatus}
-                    : task
-            );
-        case REMOVE_TASK:{
-            return state.filter((task)=> task.id!== action.id);
+        case ADD_TASK:{
+            let copy = Object.assign({},state);
+            copy.todos.unshift({id:action.id,text:action.text,completeStatus: false})
+            return copy;
 
+
+    };
+        case DONE_TASK:{
+            let copy = Object.assign({},state);
+            copy.todos.map((task) => {
+                    if (task.id === action.id) {
+                        if(task.completeStatus === true){return copy}
+                        task.completeStatus = !task.completeStatus;
+                    }
+                }
+
+            );
+            return copy;
         }
 
+        case REMOVE_TASK:{
+            let copy = Object.assign({},state);
+            console.log(action.id,)
+            copy.todos = copy.todos.filter((task)=> task.id !== action.id);
+            return copy
+
+        }
 
         default:
             return state;

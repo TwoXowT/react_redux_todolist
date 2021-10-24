@@ -1,10 +1,8 @@
 import React from 'react';
-import './Task.scss';
-import {AiOutlineCheck, CgTrashEmpty, MdOutlineNotes} from "react-icons/all";
-
 import {useDispatch} from "react-redux";
-import {addTask, doneTask, removeTask} from "../store/actionCreators/actionCreators";
-
+import {doneTask, removeTask} from "../store/actionCreators/actionCreators";
+import {AiOutlineCheck, CgTrashEmpty, MdOutlineNotes} from "react-icons/all";
+import './Task.scss';
 const Task = ({task}) =>{
 
     const dispatch = useDispatch();

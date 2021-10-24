@@ -1,18 +1,16 @@
 import React, {useState} from 'react';
-import './App.scss';
+import {useSelector} from "react-redux";
 import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";
-import {addTask} from "./store/actionCreators/actionCreators";
-import {useSelector} from "react-redux";
 import WeekProgress from "./components/weekProgresBar/WeekProgress";
-
+import './App.scss';
 function App() {
-        const taskList = useSelector(state => state)
+
   return (
     <div className="App">
         <WeekProgress/>
         <AddTask />
-        <TaskList taskList={taskList} />
+        <TaskList />
     </div>
   );
 }
