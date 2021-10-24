@@ -7,32 +7,25 @@ const todos = (state = initialState, action)=>{
     }
 
     switch (action.type){
-        case ADD_TASK:{
-            let copy = Object.assign({},state);
-            copy.todos.unshift({id:action.id,text:action.text,completeStatus: false})
-            return copy;
+        case ADD_TASK:
+            return {...state,
+                // сначала новый таск, чтобы он появлялся вверху списка
+                todos: [{id:action.id, text: action.text, completeStatus: false},...state.todos]
+            }
 
+        case DONE_TASK: {
 
-    }
-        case DONE_TASK:{
-            let copy = Object.assign({},state);
-            copy.todos.map((task) => {
-                    if (task.id === action.id) {
-                        if(task.completeStatus === true){return copy}
-                        task.completeStatus = !task.completeStatus;
-                    }
+            const newState = {...state, todos: state.todos.map((task) => {
+                if (task.id === action.id && !task.completeStatus) {
+                    task.completeStatus = !task.completeStatus;
                 }
-
-            );
-            return copy;
+                return task;
+            })}
+            return newState;
         }
 
         case REMOVE_TASK:{
-            let copy = Object.assign({},state);
-            console.log(action.id,)
-            copy.todos = copy.todos.filter((task)=> task.id !== action.id);
-            return copy
-
+            return {...state, todos: state.todos.filter((task) => task.id !== action.id)}
         }
         case INC_CREATE:{
             let copy = Object.assign({},state);

@@ -1,6 +1,5 @@
-
-import './WeekProgress.scss';
 import {useSelector} from "react-redux";
+import './WeekProgress.scss';
 
 const WeekProgress = () => {
 

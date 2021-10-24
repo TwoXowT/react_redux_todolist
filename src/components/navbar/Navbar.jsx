@@ -1,7 +1,5 @@
-
-import './Navbar.scss';
 import {AiOutlineHome, BsPeople, MdSportsFootball, MdWorkOutline, RiTodoFill} from "react-icons/all";
-
+import './Navbar.scss';
 
 const Navbar = () => {
 

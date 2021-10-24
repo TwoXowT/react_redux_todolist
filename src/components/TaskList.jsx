@@ -1,11 +1,11 @@
+import {useSelector} from "react-redux";
 import Task from "./Task";
 import './TaskList.scss';
-import {useSelector} from "react-redux";
+
 
 const TaskList = () =>{
     const taskList = useSelector(state => state)
 
-    console.log('tasklist1',taskList)
     return(
         <div className='tasklist-container'>
             <div className='tasklist-heading'> Активные задачи</div>

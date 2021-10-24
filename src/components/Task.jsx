@@ -2,13 +2,13 @@ import React from 'react';
 import {useDispatch} from "react-redux";
 import {
     doneTask,
-    inc_create_task,
     inc_delete_task,
     inc_done_task,
     removeTask
 } from "../store/actionCreators/actionCreators";
 import {AiOutlineCheck, CgTrashEmpty, MdOutlineNotes} from "react-icons/all";
 import './Task.scss';
+
 const Task = ({task}) =>{
 
     const dispatch = useDispatch();
