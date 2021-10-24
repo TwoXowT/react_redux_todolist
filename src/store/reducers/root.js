@@ -1,4 +1,4 @@
-import {ADD_TASK, DONE_TASK, REMOVE_TASK} from "../actions/action";
+import {ADD_TASK, DONE_TASK, INC_CREATE, INC_DELETE, INC_DONE, REMOVE_TASK} from "../actions/action";
 import {initialState} from "./inithialState";
 
 const todos = (state = initialState, action)=>{
@@ -13,7 +13,7 @@ const todos = (state = initialState, action)=>{
             return copy;
 
 
-    };
+    }
         case DONE_TASK:{
             let copy = Object.assign({},state);
             copy.todos.map((task) => {
@@ -33,6 +33,21 @@ const todos = (state = initialState, action)=>{
             copy.todos = copy.todos.filter((task)=> task.id !== action.id);
             return copy
 
+        }
+        case INC_CREATE:{
+            let copy = Object.assign({},state);
+            copy.countCreate++;
+            return copy;
+        }
+        case INC_DELETE:{
+            let copy = Object.assign({},state);
+            copy.countDelete++;
+            return copy;
+        }
+        case INC_DONE:{
+            let copy = Object.assign({},state);
+            copy.countDone++;
+            return copy;
         }
 
         default:
