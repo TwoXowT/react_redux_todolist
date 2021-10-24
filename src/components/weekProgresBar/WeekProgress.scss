@@ -1,0 +1,55 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+
+.weekprogress-container{
+  background-color: $primary-color-block;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px 0;
+  width: 600px;
+  height: 180px;
+  .weekprogress-header{
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 20px;
+    color:$primary-color-text-second
+  }
+  .statistic-container{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    .statistic-item{
+      margin: 0px 5px;
+      text-align: center;
+      width: 120px;
+      height: 120px ;
+
+      .statistic-description{
+
+      margin: 7px ;
+      }
+      .statistic-circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border: 2px solid $primary-color-text-second;
+        border-radius: 90px;
+        .statistic-value{
+          color:$primary-color-text-second;
+          font-size: 40px;
+        }
+        .statistic-bottom-description{
+
+        }
+      }
+
+    }
+  }
+}
