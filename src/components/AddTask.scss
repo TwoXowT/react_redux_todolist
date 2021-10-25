@@ -5,15 +5,14 @@ $primary-color-text-second: #49a29b;
 $primary-color-border: #555b65;
 $primary-color-button-close: #eb5454;
 .addTask-container{
-
   background-color: $primary-color-block;
   border-radius: 15px;
   margin-bottom: 15px;
-  padding: 15px 0;
-  width: 600px;
+  padding: 10px 0;
+  width: 700px;
   h1{
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 20px;
     color:$primary-color-text-second
   }

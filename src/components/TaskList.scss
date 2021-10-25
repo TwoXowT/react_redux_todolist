@@ -6,14 +6,14 @@ $primary-color-done-task: #555b65;
 
 .tasklist-container{
   background-color: $primary-color-block;
-  width: 600px;
-  min-height: 40vh;
+  width: 700px;
+  min-height: 50vh;
   border-radius: 15px;
 
   .tasklist-heading{
     color: $primary-color-text-second;
     font-size: 22px;
-    margin: 20px;
+    padding: 20px;
   }
 
   .tasklist-place{

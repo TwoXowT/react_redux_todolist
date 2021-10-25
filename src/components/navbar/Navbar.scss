@@ -1,0 +1,78 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+
+
+.navbar-container{
+
+  top: 0;
+  padding-left: 15px;
+  background-color: $primary-color-block;
+  width: 200px;
+  height: 100vh;
+  margin-right: 20px;
+
+  .navbar-header{
+    position: relative;
+    padding: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .navbar-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color-text-second ;
+      width: 65px;
+      height: 65px;
+      border-radius: 20px;
+    }
+    .navbar-name-app{
+      padding-left: 10px;
+      display: inline-block;
+
+      color: $primary-color-text-second;
+      font-size: 24px;
+      width: 30px;
+    }
+  }
+
+  .navbar-category-paragraph{
+    margin: 10px 0px;
+    color: $primary-color-text-second;
+    font-size: 24px;
+    width: 30px;
+  }
+
+  .navbar-category-container{
+    .category-item{
+      margin: 5px 0;
+      padding-left: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      p{
+        margin-left: 10px;
+        font-size: 18px;
+      }
+    }
+    .category-item:hover{
+      background: rgba(73,162,155,0.4);
+    }
+
+  }
+  .navbar-statistic-paragraph{
+    color: $primary-color-text-second;
+    font-size: 24px;
+    width: 30px;
+  }
+  .navbar-statistic-container{
+
+  }
+
+}
