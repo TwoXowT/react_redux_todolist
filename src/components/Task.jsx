@@ -13,9 +13,10 @@ const Task = ({task}) =>{
 
     const dispatch = useDispatch();
 
-    function buttonDoneClick(id){
-        dispatch(doneTask(id))
-        dispatch(inc_done_task())
+    function buttonDoneClick(task){
+        if( !task.completeStatus) dispatch(inc_done_task())
+        dispatch(doneTask(task.id))
+
     }
     function buttonDeleteClick(id){
         dispatch(removeTask(id))
@@ -26,7 +27,7 @@ const Task = ({task}) =>{
         <div key={task.id} className='task-container'>
                 <p>{task.text}</p>
             <div className='task-buttons-container'>
-                <div onClick={() =>  buttonDoneClick(task.id)} className='task-done-button'>
+                <div onClick={() =>  buttonDoneClick(task)} className='task-done-button'>
                     <AiOutlineCheck color={task.completeStatus?('#555b65'):('#49a29b')} fontSize='1.5em'/>
                 </div>
                 <div className='task-change-button'>
