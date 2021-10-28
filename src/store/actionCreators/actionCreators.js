@@ -2,10 +2,11 @@
 import {ADD_TASK, DONE_TASK, INC_CREATE, INC_DELETE, INC_DONE, REMOVE_TASK} from "../actions/action";
 let nextTodoId = 0;
 
-export const addTask = (text) =>({
+export const addTask = (text,category) =>({
     type: ADD_TASK,
     id:nextTodoId++,
     text,
+    category,
 });
 
 export const doneTask = (id) =>({

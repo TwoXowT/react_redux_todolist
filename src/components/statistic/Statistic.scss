@@ -1,0 +1,20 @@
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+
+.statistic-wrapper{
+  background-color: $primary-color-block;
+  width: 500px;
+  margin: 15px 20px;
+  padding: 15px 15px;
+  border-radius: 15px;
+  h1{
+    color: $primary-color-text-second;
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+}

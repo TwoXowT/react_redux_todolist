@@ -1,15 +1,15 @@
-export const initialState = {
-    todos:[
-        {id:1, text:"Some text", completeStatus:true},
-        {id:2, text:"Some text", completeStatus:true},
-        {id:3, text:"Some text", completeStatus:true},
-        {id:4, text:"Some text", completeStatus:false},
-        {id:5, text:"Some text", completeStatus:false},
-    ],
+export const initialState={
+    todos: [],
     countDelete: 0,
     countDone: 0,
     countCreate:0,
+    // Наибольшее кол-во завершенный задач(день)
+    bestWorkDay: null,
+    // Наибольшее кол-во созданный задач(день)
+    bestCreateDay: null,
+    //Наибольшее кол-во созданный задач в разделе(раздел)
+    bestCategoryCreate: null,
+    category: ['Дом','Работа','Семья','Спорт']
 }
-
 
 
