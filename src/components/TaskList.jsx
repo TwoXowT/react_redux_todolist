@@ -1,9 +1,8 @@
 import {useSelector} from "react-redux";
-import Task from "./Task";
-import './TaskList.scss';
 import {useContext} from "react";
+import Task from "./Task";
 import Context from "react-redux/lib/components/Context";
-
+import './TaskList.scss';
 
 const TaskList = () =>{
     const [context, setContext] = useContext(Context);

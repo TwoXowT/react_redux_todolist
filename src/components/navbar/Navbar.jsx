@@ -1,16 +1,12 @@
 import {AiOutlineHome, BsPeople, MdSportsFootball, MdWorkOutline, RiTodoFill} from "react-icons/all";
-import './Navbar.scss';
 import {useContext} from "react";
-import Context from "react-redux/lib/components/Context";
 import {useSelector} from "react-redux";
-import {current} from "@reduxjs/toolkit";
+import Context from "react-redux/lib/components/Context";
+import './Navbar.scss';
 
 const Navbar = () => {
     const [context, setContext] = useContext(Context);
     const category = useSelector(state => state)
-
-    let activeCategoty = 'category-item'
-
 
     const items = category.category.map((element) =>{
         return(

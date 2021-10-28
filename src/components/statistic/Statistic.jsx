@@ -1,9 +1,6 @@
 import './Statistic.scss'
 
-
 const Statistic= () => {
-
-
 
     return(
         <div className='statistic-wrapper'>

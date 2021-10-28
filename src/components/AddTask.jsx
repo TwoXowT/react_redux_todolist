@@ -1,8 +1,8 @@
 import React, {useContext, useState} from 'react';
 import {useDispatch} from "react-redux";
 import {addTask, inc_create_task} from "../store/actionCreators/actionCreators";
-import './AddTask.scss';
 import Context from "react-redux/lib/components/Context";
+import './AddTask.scss';
 
 const AddTask = ({ createTask }) => {
     const [text, setText] = useState('Поучить React')

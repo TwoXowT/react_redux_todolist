@@ -2,17 +2,15 @@ import React, {useEffect, useState} from 'react';
 import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";
 import WeekProgress from "./components/weekProgresBar/WeekProgress";
-import './App.scss';
 import Navbar from "./components/navbar/Navbar";
 import TimeData from "./components/timedata/TimeData";
 import Statistic from "./components/statistic/Statistic";
 import Context from "react-redux/lib/components/Context";
+import './App.scss';
+
 function App() {
 
     const [currentCategory, setCurrentCategory] = useState('Дом')
-    function changeCategory(category){
-
-    }
 
   return (
     <div className="App">

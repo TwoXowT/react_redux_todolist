@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import {AiOutlineCalendar, AiOutlineClockCircle} from "react-icons/all";
 import './TimeData.scss'
 
-
 const TimeData= () => {
     const [time, setTime]= useState(new Date().toLocaleTimeString())
     const [date, setDate] = useState(new Date())
@@ -12,13 +11,12 @@ const TimeData= () => {
     var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 
     function currentDate(){
-        return date.getDay()-1 + ' '+ months[date.getMonth()] +' '+ date.getFullYear()
+        return date.getDate() + ' '+ months[date.getMonth()] +' '+ date.getFullYear()
     }
 
     useEffect(()=>{
         setInterval(() => tick(), 1000);
     })
-
 
     return(
         <div className='timedata-container'>
