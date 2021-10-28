@@ -16,10 +16,7 @@ const todos = (state = initialState, action)=>{
 
     switch (action.type){
         case ADD_CATEGORY:{
-           return  state.category.includes(action.category)
-               ?
-               (state)
-               :
+           return  state.category.includes(action.category) ? (state) :
                ({...state, category: [...state.category,action.category]})
 
         }
