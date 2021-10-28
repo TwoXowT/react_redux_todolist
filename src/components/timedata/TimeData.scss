@@ -1,0 +1,47 @@
+
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+
+.timedata-container{
+  background-color: $primary-color-block;
+  width: 500px;
+  margin: 15px 20px;
+  padding: 15px 15px;
+  border-radius: 15px;
+  h1{
+    color: $primary-color-text-second;
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  .timedata-wrapper{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .timedata-item{
+
+
+      p{
+
+      }
+      .timedata-val{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+
+        p{
+          margin-left: 5px;
+          display: inline;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
