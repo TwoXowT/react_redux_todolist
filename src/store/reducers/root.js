@@ -10,9 +10,8 @@ const todos = (state = initialState, action)=>{
         case ADD_TASK:
             return {...state,
                 // сначала новый таск, чтобы он появлялся вверху списка
-                todos: [{id:action.id, text: action.text, completeStatus: false},...state.todos]
+                todos: [{id:action.id, category: action.category, text: action.text, completeStatus: false, createDate: new Date()},...state.todos]
             }
-
         case DONE_TASK: {
 
             const newState = {...state, todos: state.todos.map((task) => {
@@ -23,7 +22,6 @@ const todos = (state = initialState, action)=>{
             })}
             return newState;
         }
-
         case REMOVE_TASK:{
             return {...state, todos: state.todos.filter((task) => task.id !== action.id)}
         }
@@ -42,7 +40,6 @@ const todos = (state = initialState, action)=>{
             copy.countDone++;
             return copy;
         }
-
         default:
             return state;
     }

@@ -5,19 +5,33 @@ import WeekProgress from "./components/weekProgresBar/WeekProgress";
 import './App.scss';
 import Navbar from "./components/navbar/Navbar";
 import TimeData from "./components/timedata/TimeData";
+import Statistic from "./components/statistic/Statistic";
+import Context from "react-redux/lib/components/Context";
 function App() {
+
+    const [currentCategory, setCurrentCategory] = useState('Дом')
+    function changeCategory(category){
+
+    }
 
   return (
     <div className="App">
-        <Navbar>
+        <Context.Provider value={[currentCategory, setCurrentCategory]}>
+            <Navbar/>
+            <div className="app-main-content">
+                <WeekProgress/>
+                <AddTask />
+                <TaskList />
+            </div>
+        </Context.Provider>
 
-        </Navbar>
-        <div className="app-main-content">
-            <WeekProgress/>
-            <AddTask />
-            <TaskList />
+        <div className="app-additional-content">
+            <TimeData/>
+            <Statistic>
+
+            </Statistic>
         </div>
-        <TimeData/>
+
 
     </div>
   );

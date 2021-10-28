@@ -1,7 +1,26 @@
 import {AiOutlineHome, BsPeople, MdSportsFootball, MdWorkOutline, RiTodoFill} from "react-icons/all";
 import './Navbar.scss';
+import {useContext} from "react";
+import Context from "react-redux/lib/components/Context";
+import {useSelector} from "react-redux";
+import {current} from "@reduxjs/toolkit";
 
 const Navbar = () => {
+    const [context, setContext] = useContext(Context);
+    const category = useSelector(state => state)
+
+    let activeCategoty = 'category-item'
+
+
+    const items = category.category.map((element) =>{
+        return(
+            <div className={context === element ? ('categoty-item-active'):('category-item')}
+                 onClick={()=>{setContext(element)} }>
+                <p className='category-name'>
+                    {element}
+                </p>
+            </div>
+        ) })
 
     return(
         <div className='navbar-container'>
@@ -14,23 +33,8 @@ const Navbar = () => {
             <div className='navbar-category-paragraph'> Категории </div>
 
             <div className='navbar-category-container'>
-                <div className='category-item'>
-                    <AiOutlineHome color='#f9f9f9' fontSize='2em'/>
-                    <p>Дом</p>
-                </div>
+                {items}
 
-                <div className='category-item'>
-                    <BsPeople color='#f9f9f9' fontSize='2em'/>
-                    <p>Семья</p>
-                </div>
-                <div className='category-item'>
-                    <MdWorkOutline color='#f9f9f9' fontSize='2em'/>
-                    <p>Работа</p>
-                </div>
-                <div className='category-item'>
-                    <MdSportsFootball color='#f9f9f9' fontSize='2em'/>
-                    <p>Спорт</p>
-                </div>
             </div>
             <div className='navbar-statistic-paragraph'>Данные</div>
             <div className='navbar-statistic-container'>
