@@ -12,4 +12,11 @@ $primary-color-text-second: #49a29b;
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: row;
+  .app-main-content{
+    margin: 15px  ;
+  }
+
+  .app-additional-content{
+    margin: 15px  ;
+  }
 }

@@ -17,17 +17,16 @@ function App() {
         <Context.Provider value={[currentCategory, setCurrentCategory]}>
             <Navbar/>
             <div className="app-main-content">
-                <WeekProgress/>
+
                 <AddTask />
                 <TaskList />
             </div>
         </Context.Provider>
 
         <div className="app-additional-content">
+            <WeekProgress/>
             <TimeData/>
-            <Statistic>
 
-            </Statistic>
         </div>
 
 
