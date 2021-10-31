@@ -7,6 +7,8 @@ import TimeData from "./components/timedata/TimeData";
 import Statistic from "./components/statistic/Statistic";
 import Context from "react-redux/lib/components/Context";
 import './App.scss';
+import Header from "./components/header/Header";
+import Authorization from "./components/auth/Authorization";
 
 function App() {
 
@@ -14,20 +16,32 @@ function App() {
 
   return (
     <div className="App">
-        <Context.Provider value={[currentCategory, setCurrentCategory]}>
-            <Navbar/>
-            <div className="app-main-content">
 
-                <AddTask />
-                <TaskList />
-            </div>
-        </Context.Provider>
+        <Authorization/>
 
-        <div className="app-additional-content">
-            <WeekProgress/>
-            <TimeData/>
+        {/*<Context.Provider value={[currentCategory, setCurrentCategory]}>*/}
+        {/*    <Navbar/>*/}
 
-        </div>
+        {/*    <div className='app-main'>*/}
+        {/*        <Header/>*/}
+        {/*        <div className='app-main-cont'>*/}
+        {/*            <div className="app-main-content">*/}
+        {/*                <AddTask />*/}
+        {/*                <TaskList />*/}
+        {/*            </div>*/}
+
+        {/*        <div className="app-additional-content">*/}
+        {/*            <WeekProgress/>*/}
+        {/*            <TimeData/>*/}
+
+        {/*        </div>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+
+
+        {/*</Context.Provider>*/}
+
+
 
 
     </div>
