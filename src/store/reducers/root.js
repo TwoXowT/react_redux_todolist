@@ -1,4 +1,12 @@
-import {ADD_TASK, DONE_TASK, INC_CREATE, INC_DELETE, INC_DONE, REMOVE_TASK} from "../actions/action";
+import {
+    ADD_CATEGORY,
+    ADD_TASK,
+    DONE_TASK,
+    INC_CREATE,
+    INC_DELETE,
+    INC_DONE,
+    REMOVE_TASK
+} from "../actions/action";
 import {initialState} from "./inithialState";
 
 const todos = (state = initialState, action)=>{
@@ -7,6 +15,11 @@ const todos = (state = initialState, action)=>{
     }
 
     switch (action.type){
+        case ADD_CATEGORY:{
+           return  state.category.includes(action.category) ? (state) :
+               ({...state, category: [...state.category,action.category]})
+
+        }
         case ADD_TASK:
             return {...state,
                 // сначала новый таск, чтобы он появлялся вверху списка

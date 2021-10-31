@@ -13,6 +13,7 @@ $primary-color-button-close: #eb5454;
   background-color: $primary-color-block;
   width: 200px;
   height: 100vh;
+
   margin-right: 20px;
 
   .navbar-header{
@@ -58,11 +59,33 @@ $primary-color-button-close: #eb5454;
       justify-content: flex-start;
       align-items: center;
 
+
       p{
         margin-left: 10px;
         font-size: 18px;
       }
     }
+
+    .category-item-add{
+      margin: 5px 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+    }
+    input{
+      margin-left: 16px;
+      color:$primary-color-text-first;
+      background-color: $primary-color-block;
+      border: none;
+      display: inline;
+      outline: none;
+      width: 120px;
+      height: 25px;
+      font-size: 18px;
+    }
+
+
     .categoty-item-active{
       border-right: 3px solid $primary-color-text-second;
       margin: 5px 0;

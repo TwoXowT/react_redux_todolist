@@ -4,3 +4,4 @@ export const DONE_TASK = 'DONE_TASK';
 export const INC_CREATE = 'INC_CREATE';
 export const INC_DELETE = 'INC_DELETE';
 export const INC_DONE = 'INC_DONE';
+export const ADD_CATEGORY = 'ADD_CATEGORY';

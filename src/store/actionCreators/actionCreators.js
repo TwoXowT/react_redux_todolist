@@ -1,6 +1,19 @@
 
-import {ADD_TASK, DONE_TASK, INC_CREATE, INC_DELETE, INC_DONE, REMOVE_TASK} from "../actions/action";
+import {
+    ADD_CATEGORY,
+    ADD_TASK,
+    DONE_TASK,
+    INC_CREATE,
+    INC_DELETE,
+    INC_DONE,
+    REMOVE_TASK
+} from "../actions/action";
 let nextTodoId = 0;
+
+export const addCategory =(category)=>({
+    type: ADD_CATEGORY,
+    category,
+})
 
 export const addTask = (text,category) =>({
     type: ADD_TASK,
