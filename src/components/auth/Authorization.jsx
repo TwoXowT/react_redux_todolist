@@ -19,6 +19,7 @@ const Authorization = () => {
     }
 
     return(
+
         <div className='auth-container'>
             <h1>Вход в аккаунт</h1>
             <form className='form' onSubmit={handleSubmit}>
