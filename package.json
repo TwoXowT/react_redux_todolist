@@ -2,7 +2,7 @@
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/TwoXowT/react_redux_todolist",
+  "homepage": "https://TwoXowT.github.io/react_redux_todolist",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
