@@ -1,0 +1,23 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+
+  .app-main{
+
+    .app-main-cont{
+      display: flex;
+      justify-content: center;
+
+      flex-flow: row;
+      .app-main-content{
+        margin: 15px  ;
+      }
+
+      .app-additional-content{
+        margin: 15px  ;
+      }
+    }
+
+  }
+

@@ -7,27 +7,10 @@ $primary-color-text-second: #49a29b;
   color: $primary-color-text-first;
   width: 100vw;
   min-height: 100vh;
-
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: row;
-  .app-main{
 
-    .app-main-cont{
-      display: flex;
-      justify-content: center;
-
-      flex-flow: row;
-      .app-main-content{
-        margin: 15px  ;
-      }
-
-      .app-additional-content{
-        margin: 15px  ;
-      }
-    }
-
-  }
 
 }
