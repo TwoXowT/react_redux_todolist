@@ -1,30 +1,28 @@
 import React, {useContext, useState} from 'react'
-
 import {AiOutlineCopyright, RiTodoFill} from "react-icons/all";
-import './AuthPage.scss'
 import {useHttp} from "../../hooks/http.hook";
 import {AuthContext} from "../../context/AuthContext";
 import {Authorization} from "../authorization/Authorization";
-import {Registration} from "../authorization/Registration";
+import './AuthPage.scss'
+
 export const AuthPage = ()=>{
-    const {loading,error,request} = useHttp()
+    const {request} = useHttp()
     const auth = useContext(AuthContext)
     const [form,setForm] = useState({
         email:'',
         password:''
     })
 
-
+    let succsesRegister = false
     const loginHandler = async()=>{
         try{
             const data = await request('/api/auth/login','POST',{...form})
             auth.login(data.token, data.userId)
+            succsesRegister = true
         }catch (e){}
     }
-
     const changeHandler = e =>{
         setForm({...form, [e.target.name]: e.target.value})
-        console.log('data', form)
     }
 
     return(

@@ -69,6 +69,13 @@ $primary-color-button-close: #eb5454;
         justify-content: center;
         flex-flow: column;
         align-items: center;
+        .valid-message{
+          font-size: 14px;
+          color: $primary-color-text-second;
+          padding: 0;
+          margin: 2px;
+        }
+
         .button-submit{
           border: none;
           color:$primary-color-text-first;
