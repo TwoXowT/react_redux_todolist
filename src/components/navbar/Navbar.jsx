@@ -1,16 +1,12 @@
 import {
-    AiOutlineHome,
     AiOutlinePlusCircle,
-    BsPeople,
-    MdSportsFootball,
-    MdWorkOutline,
     RiTodoFill
 } from "react-icons/all";
 import React, {useContext, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import Context from "react-redux/lib/components/Context";
-import './Navbar.scss';
 import {addCategory} from "../../store/actionCreators/actionCreators";
+import './Navbar.scss';
 
 const Navbar = () => {
     const [context, setContext] = useContext(Context);
