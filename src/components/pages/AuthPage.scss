@@ -1,0 +1,136 @@
+$primary-color-bg: #222831;
+$primary-color-text-first: #f9f9f9;
+$primary-color-block: #2c3440;
+$primary-color-text-second: #49a29b;
+$primary-color-border: #555b65;
+$primary-color-button-close: #eb5454;
+
+
+.authpage-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+
+.authpage-header{
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  .navbar-header{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    .navbar-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color-text-second ;
+      width: 65px;
+      height: 65px;
+      border-radius: 20px;
+    }
+    .navbar-name-app{
+      padding-left: 10px;
+      display: inline-block;
+
+      color: $primary-color-text-second;
+      font-size: 24px;
+      width: 30px;
+    }
+}
+
+  }
+  .auth-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    .auth-container{
+      background-color: $primary-color-block;
+      width: 300px;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+      h1{
+        color: $primary-color-text-second;
+        font-weight: 400;
+        text-align: center;
+        font-size: 20px;
+      }
+      .form{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+        .valid-message{
+          font-size: 14px;
+          color: $primary-color-text-second;
+          padding: 0;
+          margin: 2px;
+        }
+
+        .button-submit{
+          border: none;
+          color:$primary-color-text-first;
+          background-color: $primary-color-text-second;
+          border-radius: 10px;
+          font-size: 20px;
+          font-weight: 500;
+
+          padding: 10px 20px;
+        }
+
+        .button-submit:hover{
+          transition: 0.2s;
+          background-color: #65bab3;
+        }
+
+        input{
+          margin: 10px 0px;
+          display: block;
+          color:$primary-color-text-first;
+          background-color: $primary-color-block;
+          border: 2px solid $primary-color-border;
+          border-radius: 15px;
+          outline: none;
+          font-size: 20px;
+          padding: 10px;
+        }
+      }
+
+      .text-registration{
+        color:$primary-color-text-first;
+        .registration-text{
+          display: inline;
+          color:$primary-color-text-second;
+        }
+      }
+
+    }
+
+  }
+
+  .authpage-footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer-icon{
+
+    }
+    p{
+      margin: 5px 10px;
+      display: inline;
+      text-align: center;
+      color: $primary-color-border;
+    }
+  }
+
+}
